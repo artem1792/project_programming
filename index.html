@@ -6,6 +6,52 @@
     <title>Основы JavaScript</title>
 </head>
 <body>
-    
+    <h1>Язык программирования JavaScript</h1>
+
+    <script>
+        /* let str = "hello, \"world\""
+        console.log(str)
+
+        let a, b
+        a = 16
+        b = 5
+        console.log(18 / 5)
+        console.log(Math.floor(18 / 5))
+
+        a = 1
+        b = ++a
+        console.log(a, b) */
+
+        /* let x1, x2, sum
+        x1 = parseFloat(prompt("Введите первое число", 0))
+        x2 = parseFloat(prompt("Введите второе число", 0))
+        
+        sum = x1 + x2
+        
+        alert("Сумма равна = " + sum) */
+        
+        /* let numInFolder, numOnPage, numOfPages
+
+        numInFolder = parseInt(prompt("Введите кол-во фотографий в папке"))
+        numOnPage = parseInt(prompt("Введите кол-во фотографий на странице"))
+        
+        numOfPages = Math.ceil(numInFolder / numOnPage)
+
+        alert("Кол-во страниц = " + numOfPages) */
+
+        // Дано 6-ти значное число, найти сумму его цифр
+        let number, d1, d2, d3, d4, d5, d6
+        
+        number = parseInt(prompt("Введите 6-ти значное число = "))
+        d1 = number % 10 // находим единицы
+        d2 = Math.floor(number / 10) % 10 // находим десятки
+        d3 = Math.floor(number / 100) % 10 // находим сотни
+        d4 = Math.floor(number / 1000) % 10 // находим тысячи
+        d5 = Math.floor(number / 10000) % 10 // находим десятки тысяч
+        d6 = Math.floor(number / 100000) % 10 // находим сотни тысяч
+
+        alert(d1+d2+d3+d4+d5+d6)
+
+    </script>
 </body>
 </html>
