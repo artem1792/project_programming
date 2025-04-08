@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простейшие программы</title>
+</head>
+<body>
+    <script>
+        // Найти площадь кольца по заданным внешнему и внутреннему радиусам
+        let s, radius1, radius2
+        const numPI = 3.14
+        radius1 = parseInt(prompt("Введите внешний радиус"))
+        radius2 = parseInt(prompt("Введите внутренний радиус"))
+
+        s = numPI * (Math.pow(radius1, 2) - Math.pow(radius2, 2))
+
+        alert("Площадь кольца равна = " + s)
+    </script>
+
+    <script>
+        // Дано расстояние в метрах. Найти число полных километров в нем
+        let m, km
+        m = parseInt(prompt("Введите расстояние в метрах"))
+
+        km = m / 1000
+
+        alert("Число полных километров = " + km)
+    </script>
+
+    <script>
+        // Дано трехзначное число. Найти число, полученное при перестановке второй и третьей цифр заданного числа.
+        let number, num1, num2, num3
+
+        number = parseInt(prompt("Введите 3-х значное число"))
+        num1 = String(number % 10)
+        num2 = String(Math.floor(number / 10) % 10)
+        num3 = String(Math.floor(number / 100) % 10)
+
+        alert(num3+num1+num2)
+    </script>
+</body>
+</html>
