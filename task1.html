@@ -25,19 +25,20 @@
 
         km = m / 1000
 
-        alert("Число полных километров = " + km)
+        alert("Число полных километров = " + Math.ceil(km))
     </script>
 
     <script>
         // Дано трехзначное число. Найти число, полученное при перестановке второй и третьей цифр заданного числа.
-        let number, num1, num2, num3
+        let number, num1, num2, num3, result
 
         number = parseInt(prompt("Введите 3-х значное число"))
         num1 = String(number % 10)
         num2 = String(Math.floor(number / 10) % 10)
         num3 = String(Math.floor(number / 100) % 10)
+        result = num3+num1+num2
 
-        alert(num3+num1+num2)
+        alert(result)
     </script>
 </body>
 </html>
