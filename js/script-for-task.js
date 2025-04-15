@@ -93,7 +93,7 @@
     let b, sum2 = 0
     b = parseInt(prompt("Введите значение 'b'."))
     if (b >= -10) {
-        for (let i = b; i <= -10; i++) {
+        for (let i = -10; i <= b; i++) {
             sum2 += i
         }
         console.log("Сумма всех целых чисел от –10 до b = " + sum2)
@@ -103,7 +103,7 @@
     }
 
     // г)
-    let a1, b1, sum3
+    let a1, b1, sum3 = 0
     a1 = parseInt(prompt("Введите значение 'a'."))
     b1 = parseInt(prompt("Введите значение 'b'."))
     if (b1 >= a1) {
