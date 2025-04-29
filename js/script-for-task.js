@@ -3,27 +3,27 @@
     // а) является ли сумма его цифр двузначным числом;
     // б) является ли произведение его цифр трехзначным числом;
 
-    let x, d1, d2, d3, sum, prod
+    let x, d1, d2, d3, sum, prod;
 
-    x = parseInt(prompt("Введите трехзначное число"))
-    d1 = x % 10
-    d2 = Math.floor(x / 10) % 10
-    d3 = Math.floor(x / 100) % 10
-    sum = d1+d2+d3
-    prod = d1*d2*d3
+    x = parseInt(prompt("Введите трехзначное число"));
+    d1 = x % 10;
+    d2 = Math.floor(x / 10) % 10;
+    d3 = Math.floor(x / 100) % 10;
+    sum = d1+d2+d3;
+    prod = d1*d2*d3;
     
     if (sum < 100 && sum > 9) {
-        console.log("Сумма цифр числа является двузначным.")
+        console.log("Сумма цифр числа является двузначным.");
     }
     else {
-        console.log("Сумма цифр числа не является двузначным.")
+        console.log("Сумма цифр числа не является двузначным.");
     }
 
     if (prod > 99 && prod < 999) {
-        console.log("Произведение цифр числа является трехзначным.")
+        console.log("Произведение цифр числа является трехзначным.");
     }
     else {
-        console.log("Произведение цифр числа не является трехзначным.")
+        console.log("Произведение цифр числа не является трехзначным.");
     }
 }
 
@@ -32,33 +32,33 @@
     // а) входит ли в него цифра 6;
     // б) входит ли в него цифра n.
 
-    let x, d1, d2, d3
+    let x, d1, d2, d3;
 
-    x = parseInt(prompt("Введите трехзначное число"))
-    d1 = x % 10
-    d2 = Math.floor(x / 10) % 10
-    d3 = Math.floor(x / 100) % 10
+    x = parseInt(prompt("Введите трехзначное число"));
+    d1 = x % 10;
+    d2 = Math.floor(x / 10) % 10;
+    d3 = Math.floor(x / 100) % 10;
 
     if (d1 == 6 || d2 == 6 || d3 == 6) {
-        console.log("В число входит цифра 6.")
+        console.log("В число входит цифра 6.");
     }
     else {
-        console.log("В число не входит цифра 6.")
+        console.log("В число не входит цифра 6.");
     }
 
-    let n
+    let n;
 
-    x = parseInt(prompt("Введите трехзначное число"))
-    n = parseInt(prompt("Введите n"))
-    d1 = x % 10
-    d2 = Math.floor(x / 10) % 10
-    d3 = Math.floor(x / 100) % 10
+    x = parseInt(prompt("Введите трехзначное число"));
+    n = parseInt(prompt("Введите n"));
+    d1 = x % 10;
+    d2 = Math.floor(x / 10) % 10;
+    d3 = Math.floor(x / 100) % 10;
 
     if (d1 == n || d2 == n || d3 == n) {
-        console.log("В число входит n.")
+        console.log("В число входит n.");
     }
     else {
-        console.log("В число не входит n.")
+        console.log("В число не входит n.");
     }
 }
 
@@ -70,50 +70,50 @@
     // г) сумму всех целых чисел от a до b (значения a и b вводятся с клавиатуры; b >= a).
 
     // а)
-    let sum = 0
+    let sum = 0;
     for (let i = 100; i <= 500; i++) {
-        sum += i
+        sum += i;
     }
-    console.log("Сумма всех целых чисел от 100 до 500 = " + sum)
+    console.log("Сумма всех целых чисел от 100 до 500 = " + sum);
 
     // б)
-    let a, sum1 = 0
-    a = parseInt(prompt("Введите значение 'a'."))
+    let a, sum1 = 0;
+    a = parseInt(prompt("Введите значение 'a'."));
     if (a <= 500) {
         for (let i = a; i <= 500; i++) {
             sum1 += i
         }
-        console.log("Сумма всех целых чисел от a до 500 = " + sum1)
+        console.log("Сумма всех целых чисел от a до 500 = " + sum1);
     }
     else {
-        console.log("Значние 'a' не удовлетворяет условиям")
+        console.log("Значние 'a' не удовлетворяет условиям");
     }
 
     // в)
-    let b, sum2 = 0
-    b = parseInt(prompt("Введите значение 'b'."))
+    let b, sum2 = 0;
+    b = parseInt(prompt("Введите значение 'b'."));
     if (b >= -10) {
         for (let i = -10; i <= b; i++) {
             sum2 += i
         }
-        console.log("Сумма всех целых чисел от –10 до b = " + sum2)
+        console.log("Сумма всех целых чисел от –10 до b = " + sum2);
     }
     else {
-        console.log("Значние 'b' не удовлетворяет условиям")
+        console.log("Значние 'b' не удовлетворяет условиям");
     }
 
     // г)
-    let a1, b1, sum3 = 0
-    a1 = parseInt(prompt("Введите значение 'a'."))
-    b1 = parseInt(prompt("Введите значение 'b'."))
+    let a1, b1, sum3 = 0;
+    a1 = parseInt(prompt("Введите значение 'a'."));
+    b1 = parseInt(prompt("Введите значение 'b'."));
     if (b1 >= a1) {
         for (let i = a1; i <= b1; i++) {
-            sum3 += i
+            sum3 += i;
         }
-        console.log("Сумма всех целых чисел от a до b = " + sum3)
+        console.log("Сумма всех целых чисел от a до b = " + sum3);
     }
     else {
-        console.log("Ошибка")
+        console.log("Ошибка");
     }
 
 }
