@@ -15,3 +15,27 @@
     border: 3px solid black;
     transition: background 0.5s ease-in-out;
 }
+
+.hover:hover {
+    color: red;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.bi {
+    background: gray;
+    position: relative;
+    display: flex;
+    width: 100px;
+    height: 300px;
+}
+
+circle {
+    transition: all 0.5s ease-in-out;
+}
+
+circle:last-child {
+    content: "";
+    transform: translateY(15px);
+}
+
