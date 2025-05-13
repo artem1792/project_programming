@@ -1,0 +1,30 @@
+.tooltip {
+    background-color: lightpink;
+    color: white;
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    max-width: 200px;
+    padding: 10px;
+    background-color: white;
+    color: lightpink;
+    border: 1px solid lightpink;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.2s ease-out;
+}
+
+.tooltip-animated::after {
+    transform: translateY(100%);
+    opacity: 1;
+}
+
+/* 9.	Реализуйте разные анимации (переходы) для появления и закрытия подсказки */
+/* 10.	Реализуйте появления подсказки при наведении курсора (а не клике), соответственно, при отведении курсора подсказка должна исчезать. Используйте события mouseover и mouseleave */

@@ -1,0 +1,58 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(1.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.modal__wrapper {
+    padding: 30px;
+    background-color: #fff;
+    max-width: 600px;
+    width: 70%;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.modal__title {
+    color: lightpink;
+}
+
+.modal--open {
+    display: flex;
+    pointer-events: auto;
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn--open {
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: lightpink;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn--open:hover, .btn--open:focus {
+    color: lightpink;
+    background-color: white;
+    box-shadow: 0px 0px 0px 2px rgba(255, 182, 193, 1);
+    border-radius: 0px;
+}
+
+/* 8.	Добавьте другие эффекты появления окна (кроме прозрачности и масштаба) на свое усмотрение. */
+/* 9.	Не забудьте стилизовать кнопку Открыть модальное окно и добавить на нее hover и focus эффекты */
+/* 10.	Добавьте в модальное окно кнопку закрыть. Стилизуйте и дополните скрипт, чтобы кнопка закрывала модальное окно. */
