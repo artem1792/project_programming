@@ -43,3 +43,13 @@
     color: red;
     margin-left: 10px;
 }
+
+.btn-edit, .btn-remove {
+    margin-left: 5px;
+    transition: color 0.3s;
+}
+
+.btn-edit:hover, .btn-edit:focus,
+.btn-remove:hover, .btn-remove:focus {
+    color: gray;
+}

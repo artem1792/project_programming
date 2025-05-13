@@ -13,11 +13,25 @@ btnCreateTask.addEventListener("click", function(event){
 
     const newTask = document.createElement("div");
     newTask.classList.add("task");
-    newTask.innerHTML = `<span>${text}</span>`;
+    newTask.innerHTML = `<span>${text}</span>
+                <i tabindex="0" class="bi bi-pencil-square btn-edit"></i>
+                <i tabindex="0" class="bi bi-trash-fill btn-remove"></i>`;
     container.append(newTask);
 
     tasks = document.querySelectorAll(".task");
     console.log(tasks); 
+});
+
+// Удаление и редактирование задачи
+container.addEventListener("click", (event) => {
+    const btn = event.target; // элемент, по которому кликнул пользователь
+    if (btn.classList.contains("btn-remove")) {
+        btn.closest(".task").outerHTML = "";
+    }
+    if (btn.classList.contains("btn-edit")) {
+        btn.closest(".task").querySelector("span").setAttribute("contenteditable", "true");
+    }
+    tasks = document.querySelectorAll(".task");
 });
 
 // Тестовая кнопка
@@ -80,14 +94,16 @@ btn3.addEventListener("click", function() {
 const btn4 = document.getElementById("btn4");
 
 btn4.addEventListener("click", function() {
-    let value = document.getElementById("text-task1");
+    let value = document.getElementById("text-task1").value;
 
     let newTasks= [...tasks];
     newTasks = newTasks.filter(function(item) {
         return item.innerHTML.indexOf(value) != -1;
-    })
-    
+    });
     container.innerHTML = "";
+    for (let item of newTasks) {
+        container.append(item);
+    }
 })
 
 // Сбросить
@@ -99,11 +115,10 @@ btn5.addEventListener("click", function() {
     for (let i in newTasks) {
         container.append(newTasks[i]);
     }
-})
+});
 
+// -------------------------------------------------------------------------
 
-
-// Пример
 // function myMax() {
 //     let max = arguments[0] || 0;
 //     for(let i = 1; i < arguments.length; i++) {
@@ -113,3 +128,18 @@ btn5.addEventListener("click", function() {
 //     }
 // }
 // console.log(myMax(4,-1));
+
+// -------------------------------------------------------------------------
+// Пример всплытия
+// const tags = document.querySelectorAll("*");
+// let i = 0;
+// for (let tag of tags) {
+//     tag.addEventListener("click", (event) => {
+//         i++;
+//         console.log("Этап " + i);
+//         console.log("Целевой элемент");
+//         console.log(event.target);
+//         console.log("Элемент, который поймал событие");
+//         console.log(event.currentTarget);
+//     });
+// }
