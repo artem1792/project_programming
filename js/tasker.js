@@ -80,7 +80,7 @@ btn3.addEventListener("click", function() {
 const btn4 = document.getElementById("btn4");
 
 btn4.addEventListener("click", function() {
-    // let value =
+    let value = document.getElementById("text-task1");
 
     let newTasks= [...tasks];
     newTasks = newTasks.filter(function(item) {
@@ -89,3 +89,27 @@ btn4.addEventListener("click", function() {
     
     container.innerHTML = "";
 })
+
+// Сбросить
+const btn5 = document.getElementById("btn5");
+
+btn5.addEventListener("click", function() {
+    let newTasks = [...tasks];
+    container.innerHTML = "";
+    for (let i in newTasks) {
+        container.append(newTasks[i]);
+    }
+})
+
+
+
+// Пример
+// function myMax() {
+//     let max = arguments[0] || 0;
+//     for(let i = 1; i < arguments.length; i++) {
+//         if (arguments[i] > max) {
+//             max = arguments[1];
+//         }
+//     }
+// }
+// console.log(myMax(4,-1));
