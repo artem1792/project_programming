@@ -1,7 +1,8 @@
 const tooltips = document.querySelectorAll(".tooltip");
 
 tooltips.forEach((tooltip) => {
-    tooltip.addEventListener("click", onTooltipclick);
+    tooltip.addEventListener("mouseover", onTooltipclick);
+    tooltip.addEventListener("mouseleave", onTooltipclick);
 });
 
 function onTooltipclick (evt) {
